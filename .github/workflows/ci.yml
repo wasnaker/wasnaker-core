@@ -34,8 +34,8 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npm run build --workspace=@wasnaker/core-web
+      - run: npm run build
       - name: Publish to GitHub Packages
         run: |
           echo "//npm.github.io/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> ~/.npmrc
-          npm publish --workspace=@wasnaker/core-web --registry=https://npm.github.io
+          npm publish --registry=https://npm.github.io
