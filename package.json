@@ -1,0 +1,12 @@
+{
+  "name": "wasnaker-core",
+  "private": true,
+  "workspaces": [
+    "web"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=@wasnaker/core-web",
+    "test": "npm run test --workspace=@wasnaker/core-web",
+    "test:standalone": "node scripts/test-standalone.mjs"
+  }
+}
